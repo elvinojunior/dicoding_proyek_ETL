@@ -1,0 +1,24 @@
+# Membuat Virtual environment
+python -m venv .env
+
+# Mengaktifkan Virtual environment
+windows powershell : .env/Scripts/activate.ps1
+linux bash : source .env/bin/activate 
+
+# Install dependency
+pip install -r requirements.txt
+
+# Menjalankan skrip ETL
+python main.py
+
+# Menjalankan unit test
+python -m unittest discover tests
+
+# Menjalankan test coverage
+coverage run -m unittest discover tests
+
+# Melihat report coverage
+coverage report -m
+
+# Url Google Sheets:
+https://docs.google.com/spreadsheets/d/1p6qJwsLHahcDeUUjdrSWabOSMzFDl5wHOnZH1xspNEM/edit?usp=sharing
